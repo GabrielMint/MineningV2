@@ -1,0 +1,432 @@
+{
+ "frames": {
+  "golem_idle_0": {
+   "frame": {
+    "x": 0,
+    "y": 0,
+    "w": 240,
+    "h": 220
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 240,
+    "h": 220
+   },
+   "sourceSize": {
+    "w": 240,
+    "h": 220
+   },
+   "duration": 330
+  },
+  "golem_idle_1": {
+   "frame": {
+    "x": 244,
+    "y": 0,
+    "w": 240,
+    "h": 220
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 240,
+    "h": 220
+   },
+   "sourceSize": {
+    "w": 240,
+    "h": 220
+   },
+   "duration": 200
+  },
+  "golem_idle_2": {
+   "frame": {
+    "x": 488,
+    "y": 0,
+    "w": 240,
+    "h": 220
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 240,
+    "h": 220
+   },
+   "sourceSize": {
+    "w": 240,
+    "h": 220
+   },
+   "duration": 330
+  },
+  "golem_idle_3": {
+   "frame": {
+    "x": 732,
+    "y": 0,
+    "w": 240,
+    "h": 220
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 240,
+    "h": 220
+   },
+   "sourceSize": {
+    "w": 240,
+    "h": 220
+   },
+   "duration": 200
+  },
+  "golem_walk_0": {
+   "frame": {
+    "x": 0,
+    "y": 224,
+    "w": 240,
+    "h": 220
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 240,
+    "h": 220
+   },
+   "sourceSize": {
+    "w": 240,
+    "h": 220
+   },
+   "duration": 80
+  },
+  "golem_walk_1": {
+   "frame": {
+    "x": 244,
+    "y": 224,
+    "w": 240,
+    "h": 220
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 240,
+    "h": 220
+   },
+   "sourceSize": {
+    "w": 240,
+    "h": 220
+   },
+   "duration": 80
+  },
+  "golem_walk_2": {
+   "frame": {
+    "x": 488,
+    "y": 224,
+    "w": 240,
+    "h": 220
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 240,
+    "h": 220
+   },
+   "sourceSize": {
+    "w": 240,
+    "h": 220
+   },
+   "duration": 80
+  },
+  "golem_walk_3": {
+   "frame": {
+    "x": 732,
+    "y": 224,
+    "w": 240,
+    "h": 220
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 240,
+    "h": 220
+   },
+   "sourceSize": {
+    "w": 240,
+    "h": 220
+   },
+   "duration": 80
+  },
+  "golem_walk_4": {
+   "frame": {
+    "x": 976,
+    "y": 224,
+    "w": 240,
+    "h": 220
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 240,
+    "h": 220
+   },
+   "sourceSize": {
+    "w": 240,
+    "h": 220
+   },
+   "duration": 80
+  },
+  "golem_walk_5": {
+   "frame": {
+    "x": 1220,
+    "y": 224,
+    "w": 240,
+    "h": 220
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 240,
+    "h": 220
+   },
+   "sourceSize": {
+    "w": 240,
+    "h": 220
+   },
+   "duration": 80
+  },
+  "golem_walk_6": {
+   "frame": {
+    "x": 1464,
+    "y": 224,
+    "w": 240,
+    "h": 220
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 240,
+    "h": 220
+   },
+   "sourceSize": {
+    "w": 240,
+    "h": 220
+   },
+   "duration": 80
+  },
+  "golem_walk_7": {
+   "frame": {
+    "x": 1708,
+    "y": 224,
+    "w": 240,
+    "h": 220
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 240,
+    "h": 220
+   },
+   "sourceSize": {
+    "w": 240,
+    "h": 220
+   },
+   "duration": 80
+  },
+  "golem_attack_0": {
+   "frame": {
+    "x": 0,
+    "y": 448,
+    "w": 240,
+    "h": 220
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 240,
+    "h": 220
+   },
+   "sourceSize": {
+    "w": 240,
+    "h": 220
+   },
+   "duration": 130
+  },
+  "golem_attack_1": {
+   "frame": {
+    "x": 244,
+    "y": 448,
+    "w": 240,
+    "h": 220
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 240,
+    "h": 220
+   },
+   "sourceSize": {
+    "w": 240,
+    "h": 220
+   },
+   "duration": 140
+  },
+  "golem_attack_2": {
+   "frame": {
+    "x": 488,
+    "y": 448,
+    "w": 240,
+    "h": 220
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 240,
+    "h": 220
+   },
+   "sourceSize": {
+    "w": 240,
+    "h": 220
+   },
+   "duration": 110
+  },
+  "golem_attack_3": {
+   "frame": {
+    "x": 732,
+    "y": 448,
+    "w": 240,
+    "h": 220
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 240,
+    "h": 220
+   },
+   "sourceSize": {
+    "w": 240,
+    "h": 220
+   },
+   "duration": 90
+  },
+  "golem_attack_4": {
+   "frame": {
+    "x": 976,
+    "y": 448,
+    "w": 240,
+    "h": 220
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 240,
+    "h": 220
+   },
+   "sourceSize": {
+    "w": 240,
+    "h": 220
+   },
+   "duration": 70
+  },
+  "golem_attack_5": {
+   "frame": {
+    "x": 1220,
+    "y": 448,
+    "w": 240,
+    "h": 220
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 240,
+    "h": 220
+   },
+   "sourceSize": {
+    "w": 240,
+    "h": 220
+   },
+   "duration": 140
+  },
+  "golem_attack_6": {
+   "frame": {
+    "x": 1464,
+    "y": 448,
+    "w": 240,
+    "h": 220
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 240,
+    "h": 220
+   },
+   "sourceSize": {
+    "w": 240,
+    "h": 220
+   },
+   "duration": 160
+  }
+ },
+ "meta": {
+  "app": "HandDrawn",
+  "image": "golem.svg",
+  "size": {
+   "w": 1952,
+   "h": 672
+  },
+  "scale": "1",
+  "frameTags": [
+   {
+    "name": "golem_idle",
+    "from": 0,
+    "to": 3,
+    "direction": "forward"
+   },
+   {
+    "name": "golem_walk",
+    "from": 4,
+    "to": 11,
+    "direction": "forward"
+   },
+   {
+    "name": "golem_attack",
+    "from": 12,
+    "to": 18,
+    "direction": "forward"
+   }
+  ]
+ }
+}

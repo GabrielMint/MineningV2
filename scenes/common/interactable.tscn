@@ -1,0 +1,22 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/world/interactable.gd" id="1_interact"]
+[ext_resource type="Script" path="res://scripts/hand/hand_sprite.gd" id="2_sprite"]
+[ext_resource type="Texture2D" path="res://assets/hand/ui/ui_key_e.svg" id="3_key"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_area"]
+size = Vector2(64, 28)
+
+[node name="Interactable" type="Area2D"]
+texture_filter = 2
+script = ExtResource("1_interact")
+
+[node name="Shape" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_area")
+
+[node name="Prompt" type="Sprite2D" parent="."]
+z_index = 10
+position = Vector2(0, -36)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_key")
+script = ExtResource("2_sprite")

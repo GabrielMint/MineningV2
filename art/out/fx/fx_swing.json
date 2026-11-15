@@ -1,0 +1,568 @@
+{
+ "frames": {
+  "swing_e_0": {
+   "frame": {
+    "x": 0,
+    "y": 0,
+    "w": 64,
+    "h": 64
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 64,
+    "h": 64
+   },
+   "sourceSize": {
+    "w": 64,
+    "h": 64
+   },
+   "duration": 56
+  },
+  "swing_e_1": {
+   "frame": {
+    "x": 65,
+    "y": 0,
+    "w": 64,
+    "h": 64
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 64,
+    "h": 64
+   },
+   "sourceSize": {
+    "w": 64,
+    "h": 64
+   },
+   "duration": 56
+  },
+  "swing_e_2": {
+   "frame": {
+    "x": 130,
+    "y": 0,
+    "w": 64,
+    "h": 64
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 64,
+    "h": 64
+   },
+   "sourceSize": {
+    "w": 64,
+    "h": 64
+   },
+   "duration": 56
+  },
+  "swing_se_0": {
+   "frame": {
+    "x": 195,
+    "y": 0,
+    "w": 64,
+    "h": 64
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 64,
+    "h": 64
+   },
+   "sourceSize": {
+    "w": 64,
+    "h": 64
+   },
+   "duration": 56
+  },
+  "swing_se_1": {
+   "frame": {
+    "x": 260,
+    "y": 0,
+    "w": 64,
+    "h": 64
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 64,
+    "h": 64
+   },
+   "sourceSize": {
+    "w": 64,
+    "h": 64
+   },
+   "duration": 56
+  },
+  "swing_se_2": {
+   "frame": {
+    "x": 0,
+    "y": 65,
+    "w": 64,
+    "h": 64
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 64,
+    "h": 64
+   },
+   "sourceSize": {
+    "w": 64,
+    "h": 64
+   },
+   "duration": 56
+  },
+  "swing_s_0": {
+   "frame": {
+    "x": 65,
+    "y": 65,
+    "w": 64,
+    "h": 64
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 64,
+    "h": 64
+   },
+   "sourceSize": {
+    "w": 64,
+    "h": 64
+   },
+   "duration": 56
+  },
+  "swing_s_1": {
+   "frame": {
+    "x": 130,
+    "y": 65,
+    "w": 64,
+    "h": 64
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 64,
+    "h": 64
+   },
+   "sourceSize": {
+    "w": 64,
+    "h": 64
+   },
+   "duration": 56
+  },
+  "swing_s_2": {
+   "frame": {
+    "x": 195,
+    "y": 65,
+    "w": 64,
+    "h": 64
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 64,
+    "h": 64
+   },
+   "sourceSize": {
+    "w": 64,
+    "h": 64
+   },
+   "duration": 56
+  },
+  "swing_sw_0": {
+   "frame": {
+    "x": 260,
+    "y": 65,
+    "w": 64,
+    "h": 64
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 64,
+    "h": 64
+   },
+   "sourceSize": {
+    "w": 64,
+    "h": 64
+   },
+   "duration": 56
+  },
+  "swing_sw_1": {
+   "frame": {
+    "x": 0,
+    "y": 130,
+    "w": 64,
+    "h": 64
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 64,
+    "h": 64
+   },
+   "sourceSize": {
+    "w": 64,
+    "h": 64
+   },
+   "duration": 56
+  },
+  "swing_sw_2": {
+   "frame": {
+    "x": 65,
+    "y": 130,
+    "w": 64,
+    "h": 64
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 64,
+    "h": 64
+   },
+   "sourceSize": {
+    "w": 64,
+    "h": 64
+   },
+   "duration": 56
+  },
+  "swing_w_0": {
+   "frame": {
+    "x": 130,
+    "y": 130,
+    "w": 64,
+    "h": 64
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 64,
+    "h": 64
+   },
+   "sourceSize": {
+    "w": 64,
+    "h": 64
+   },
+   "duration": 56
+  },
+  "swing_w_1": {
+   "frame": {
+    "x": 195,
+    "y": 130,
+    "w": 64,
+    "h": 64
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 64,
+    "h": 64
+   },
+   "sourceSize": {
+    "w": 64,
+    "h": 64
+   },
+   "duration": 56
+  },
+  "swing_w_2": {
+   "frame": {
+    "x": 260,
+    "y": 130,
+    "w": 64,
+    "h": 64
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 64,
+    "h": 64
+   },
+   "sourceSize": {
+    "w": 64,
+    "h": 64
+   },
+   "duration": 56
+  },
+  "swing_nw_0": {
+   "frame": {
+    "x": 0,
+    "y": 195,
+    "w": 64,
+    "h": 64
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 64,
+    "h": 64
+   },
+   "sourceSize": {
+    "w": 64,
+    "h": 64
+   },
+   "duration": 56
+  },
+  "swing_nw_1": {
+   "frame": {
+    "x": 65,
+    "y": 195,
+    "w": 64,
+    "h": 64
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 64,
+    "h": 64
+   },
+   "sourceSize": {
+    "w": 64,
+    "h": 64
+   },
+   "duration": 56
+  },
+  "swing_nw_2": {
+   "frame": {
+    "x": 130,
+    "y": 195,
+    "w": 64,
+    "h": 64
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 64,
+    "h": 64
+   },
+   "sourceSize": {
+    "w": 64,
+    "h": 64
+   },
+   "duration": 56
+  },
+  "swing_n_0": {
+   "frame": {
+    "x": 195,
+    "y": 195,
+    "w": 64,
+    "h": 64
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 64,
+    "h": 64
+   },
+   "sourceSize": {
+    "w": 64,
+    "h": 64
+   },
+   "duration": 56
+  },
+  "swing_n_1": {
+   "frame": {
+    "x": 260,
+    "y": 195,
+    "w": 64,
+    "h": 64
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 64,
+    "h": 64
+   },
+   "sourceSize": {
+    "w": 64,
+    "h": 64
+   },
+   "duration": 56
+  },
+  "swing_n_2": {
+   "frame": {
+    "x": 0,
+    "y": 260,
+    "w": 64,
+    "h": 64
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 64,
+    "h": 64
+   },
+   "sourceSize": {
+    "w": 64,
+    "h": 64
+   },
+   "duration": 56
+  },
+  "swing_ne_0": {
+   "frame": {
+    "x": 65,
+    "y": 260,
+    "w": 64,
+    "h": 64
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 64,
+    "h": 64
+   },
+   "sourceSize": {
+    "w": 64,
+    "h": 64
+   },
+   "duration": 56
+  },
+  "swing_ne_1": {
+   "frame": {
+    "x": 130,
+    "y": 260,
+    "w": 64,
+    "h": 64
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 64,
+    "h": 64
+   },
+   "sourceSize": {
+    "w": 64,
+    "h": 64
+   },
+   "duration": 56
+  },
+  "swing_ne_2": {
+   "frame": {
+    "x": 195,
+    "y": 260,
+    "w": 64,
+    "h": 64
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 64,
+    "h": 64
+   },
+   "sourceSize": {
+    "w": 64,
+    "h": 64
+   },
+   "duration": 56
+  }
+ },
+ "meta": {
+  "app": "pxl",
+  "image": "fx_swing.png",
+  "format": "RGBA8888",
+  "size": {
+   "w": 324,
+   "h": 324
+  },
+  "scale": "1",
+  "frameTags": [
+   {
+    "name": "swing_e",
+    "from": 0,
+    "to": 2,
+    "direction": "forward"
+   },
+   {
+    "name": "swing_se",
+    "from": 3,
+    "to": 5,
+    "direction": "forward"
+   },
+   {
+    "name": "swing_s",
+    "from": 6,
+    "to": 8,
+    "direction": "forward"
+   },
+   {
+    "name": "swing_sw",
+    "from": 9,
+    "to": 11,
+    "direction": "forward"
+   },
+   {
+    "name": "swing_w",
+    "from": 12,
+    "to": 14,
+    "direction": "forward"
+   },
+   {
+    "name": "swing_nw",
+    "from": 15,
+    "to": 17,
+    "direction": "forward"
+   },
+   {
+    "name": "swing_n",
+    "from": 18,
+    "to": 20,
+    "direction": "forward"
+   },
+   {
+    "name": "swing_ne",
+    "from": 21,
+    "to": 23,
+    "direction": "forward"
+   }
+  ]
+ }
+}

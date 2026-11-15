@@ -1,0 +1,76 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/talent_node.gd" id="1_node"]
+[ext_resource type="Script" path="res://scripts/hand/hand_texture_rect.gd" id="2_rect"]
+[ext_resource type="Shader" path="res://shaders/flash.gdshader" id="3_flash"]
+[ext_resource type="Texture2D" path="res://assets/hand/talents/tt_node_locked.svg" id="4_locked"]
+[ext_resource type="Texture2D" path="res://assets/hand/talents/tt_node_open.svg" id="5_open"]
+[ext_resource type="Texture2D" path="res://assets/hand/talents/tt_node_ready.svg" id="6_ready"]
+[ext_resource type="Texture2D" path="res://assets/hand/talents/tt_node_max.svg" id="7_max"]
+[ext_resource type="Texture2D" path="res://assets/hand/talents/tt_node_hover.svg" id="8_hover"]
+[ext_resource type="Texture2D" path="res://assets/hand/talents/tt_icon_ore_damage.svg" id="9_ore_damage"]
+[ext_resource type="Texture2D" path="res://assets/hand/talents/tt_icon_mine_speed.svg" id="10_mine_speed"]
+[ext_resource type="Texture2D" path="res://assets/hand/talents/tt_icon_arc_radius.svg" id="11_arc_radius"]
+[ext_resource type="Texture2D" path="res://assets/hand/talents/tt_icon_spinning_picks.svg" id="12_spinning_picks"]
+[ext_resource type="Texture2D" path="res://assets/hand/talents/tt_icon_ore_yield.svg" id="13_ore_yield"]
+[ext_resource type="Texture2D" path="res://assets/hand/talents/tt_icon_ore_chain.svg" id="14_ore_chain"]
+[ext_resource type="Texture2D" path="res://assets/hand/talents/tt_icon_gas_resist.svg" id="15_gas_resist"]
+[ext_resource type="Texture2D" path="res://assets/hand/talents/tt_icon_armor.svg" id="16_armor"]
+[ext_resource type="Texture2D" path="res://assets/hand/talents/tt_icon_enemy_damage.svg" id="17_enemy_damage"]
+[ext_resource type="Texture2D" path="res://assets/hand/talents/tt_icon_heal_on_kill.svg" id="18_heal_on_kill"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_flash"]
+resource_local_to_scene = true
+shader = ExtResource("3_flash")
+shader_parameter/flash = false
+shader_parameter/flash_color = Color(0.996078, 0.905882, 0.380392, 1)
+
+[node name="TalentNode" type="Control"]
+texture_filter = 2
+offset_right = 28.0
+offset_bottom = 28.0
+mouse_default_cursor_shape = 2
+script = ExtResource("1_node")
+frames = {
+"hover": ExtResource("8_hover"),
+"locked": ExtResource("4_locked"),
+"max": ExtResource("7_max"),
+"open": ExtResource("5_open"),
+"ready": ExtResource("6_ready")
+}
+icons = {
+"arc_radius": ExtResource("11_arc_radius"),
+"armor": ExtResource("16_armor"),
+"enemy_damage": ExtResource("17_enemy_damage"),
+"gas_resist": ExtResource("15_gas_resist"),
+"heal_on_kill": ExtResource("18_heal_on_kill"),
+"mine_speed": ExtResource("10_mine_speed"),
+"ore_chain": ExtResource("14_ore_chain"),
+"ore_damage": ExtResource("9_ore_damage"),
+"ore_yield": ExtResource("13_ore_yield"),
+"spinning_picks": ExtResource("12_spinning_picks")
+}
+
+[node name="Body" type="Control" parent="."]
+offset_right = 28.0
+offset_bottom = 28.0
+mouse_filter = 2
+
+[node name="Frame" type="TextureRect" parent="Body"]
+material = SubResource("ShaderMaterial_flash")
+offset_right = 28.0
+offset_bottom = 28.0
+mouse_filter = 2
+texture = ExtResource("5_open")
+expand_mode = 1
+script = ExtResource("2_rect")
+
+[node name="Icon" type="TextureRect" parent="Body"]
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 23.0
+offset_bottom = 23.0
+mouse_filter = 2
+texture = ExtResource("9_ore_damage")
+expand_mode = 1
+script = ExtResource("2_rect")

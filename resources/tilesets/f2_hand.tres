@@ -1,0 +1,29 @@
+[gd_resource type="TileSet" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/hand/floor2/f2_tiles.svg" id="1_x1qao"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lcvjm"]
+texture = ExtResource("1_x1qao")
+separation = Vector2i(4, 0)
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+10:0/0 = 0
+11:0/0 = 0
+12:0/0 = 0
+13:0/0 = 0
+14:0/0 = 0
+15:0/0 = 0
+16:0/0 = 0
+
+[resource]
+tile_size = Vector2i(128, 128)
+sources/0 = SubResource("TileSetAtlasSource_lcvjm")

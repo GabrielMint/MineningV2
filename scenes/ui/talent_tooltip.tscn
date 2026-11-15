@@ -1,0 +1,148 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/talent_tooltip.gd" id="1_tooltip"]
+[ext_resource type="Theme" path="res://resources/ui/ui_theme.tres" id="2_theme"]
+[ext_resource type="Script" path="res://scripts/hand/hand_panel.gd" id="3_panel"]
+[ext_resource type="Script" path="res://scripts/hand/hand_texture_rect.gd" id="4_rect"]
+[ext_resource type="Texture2D" path="res://assets/hand/ui/ui_panel.svg" id="5_panel"]
+[ext_resource type="Texture2D" path="res://assets/hand/ui/icon_iron.svg" id="6_iron"]
+[ext_resource type="Texture2D" path="res://assets/hand/ui/icon_sapphire.svg" id="7_sapphire"]
+[ext_resource type="Texture2D" path="res://assets/hand/ui/icon_fang.svg" id="8_fang"]
+
+[node name="TalentTooltip" type="Control"]
+texture_filter = 2
+offset_right = 236.0
+offset_bottom = 82.0
+mouse_filter = 2
+theme = ExtResource("2_theme")
+script = ExtResource("1_tooltip")
+currency_icons = {
+"fang": ExtResource("8_fang"),
+"iron": ExtResource("6_iron"),
+"sapphire": ExtResource("7_sapphire")
+}
+
+[node name="Panel" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("3_panel")
+texture = ExtResource("5_panel")
+
+[node name="Info" type="Control" parent="."]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Name" type="Label" parent="Info"]
+unique_name_in_owner = true
+offset_left = 14.0
+offset_top = 11.0
+offset_right = 14.0
+offset_bottom = 11.0
+text = "PICARETA AFIADA"
+
+[node name="Desc" type="Label" parent="Info"]
+unique_name_in_owner = true
+offset_left = 14.0
+offset_top = 27.0
+offset_right = 14.0
+offset_bottom = 27.0
+theme_override_colors/font_color = Color(0.45098, 0.243137, 0.223529, 1)
+text = "+1 DANO EM MINERIOS"
+
+[node name="Total" type="Label" parent="Info"]
+unique_name_in_owner = true
+offset_left = 14.0
+offset_top = 41.0
+offset_right = 14.0
+offset_bottom = 41.0
+theme_override_colors/font_color = Color(0.45098, 0.243137, 0.223529, 1)
+text = "TOTAL: 0/20"
+
+[node name="Bought" type="Label" parent="Info"]
+unique_name_in_owner = true
+visible = false
+offset_left = 14.0
+offset_top = 57.0
+offset_right = 14.0
+offset_bottom = 57.0
+theme_override_colors/font_color = Color(0.243137, 0.537255, 0.282353, 1)
+text = "COMPRADO"
+
+[node name="Cost" type="Control" parent="Info"]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Caption" type="Label" parent="Info/Cost"]
+offset_left = 14.0
+offset_top = 57.0
+offset_right = 14.0
+offset_bottom = 57.0
+theme_override_colors/font_color = Color(0.45098, 0.243137, 0.223529, 1)
+text = "CUSTO:"
+
+[node name="Line" type="HBoxContainer" parent="Info/Cost"]
+offset_left = 66.0
+offset_top = 57.0
+offset_right = 66.0
+offset_bottom = 71.0
+mouse_filter = 2
+theme_override_constants/separation = 4
+
+[node name="CostAmount" type="Label" parent="Info/Cost/Line"]
+unique_name_in_owner = true
+text = "6"
+
+[node name="CostIcon" type="TextureRect" parent="Info/Cost/Line"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(14, 14)
+mouse_filter = 2
+texture = ExtResource("6_iron")
+expand_mode = 1
+script = ExtResource("4_rect")
+
+[node name="Locked" type="Control" parent="."]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Title" type="Label" parent="Locked"]
+offset_left = 14.0
+offset_top = 11.0
+offset_right = 14.0
+offset_bottom = 11.0
+text = "???"
+
+[node name="Line1" type="Label" parent="Locked"]
+offset_left = 14.0
+offset_top = 31.0
+offset_right = 14.0
+offset_bottom = 31.0
+theme_override_colors/font_color = Color(0.45098, 0.243137, 0.223529, 1)
+text = "COMPRE A HABILIDADE"
+
+[node name="Line2" type="Label" parent="Locked"]
+offset_left = 14.0
+offset_top = 45.0
+offset_right = 14.0
+offset_bottom = 45.0
+theme_override_colors/font_color = Color(0.45098, 0.243137, 0.223529, 1)
+text = "ANTERIOR PARA REVELAR"

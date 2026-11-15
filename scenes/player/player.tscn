@@ -1,0 +1,53 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/mine/player.gd" id="1_player"]
+[ext_resource type="PackedScene" path="res://scenes/fx/swing.tscn" id="2_swing"]
+[ext_resource type="PackedScene" path="res://scenes/mine/pick_orbit.tscn" id="3_picks"]
+[ext_resource type="Script" path="res://scripts/hand/hand_shadow.gd" id="4_shadow"]
+[ext_resource type="Texture2D" path="res://assets/hand/base/shadow_s.svg" id="5_shadow_s"]
+[ext_resource type="Script" path="res://scripts/hand/hand_animated_sprite.gd" id="6_anim"]
+[ext_resource type="SpriteFrames" path="res://resources/frames/miner.tres" id="7_frames"]
+[ext_resource type="Shader" path="res://shaders/flash.gdshader" id="8_flash"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_feet"]
+size = Vector2(14, 8)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_flash"]
+resource_local_to_scene = true
+shader = ExtResource("8_flash")
+shader_parameter/flash = false
+shader_parameter/flash_color = Color(0.996078, 0.905882, 0.380392, 1)
+
+[node name="Player" type="CharacterBody2D"]
+motion_mode = 1
+platform_on_leave = 2
+platform_floor_layers = 0
+platform_wall_layers = 0
+texture_filter = 2
+script = ExtResource("1_player")
+swing_scene = ExtResource("2_swing")
+pick_orbit_scene = ExtResource("3_picks")
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_feet")
+
+[node name="Shadow" type="Sprite2D" parent="."]
+position = Vector2(0, -1)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("5_shadow_s")
+script = ExtResource("4_shadow")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_flash")
+scale = Vector2(0.25, 0.25)
+sprite_frames = ExtResource("7_frames")
+animation = &"idle_down"
+autoplay = "idle_down"
+offset = Vector2(0, -76)
+script = ExtResource("6_anim")
+
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2(0, -16)
+position_smoothing_enabled = true
+position_smoothing_speed = 8.0

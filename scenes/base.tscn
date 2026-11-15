@@ -1,0 +1,143 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/world/base_area.gd" id="1_base"]
+[ext_resource type="PackedScene" path="res://scenes/ui/talent_tree.tscn" id="2_tree"]
+[ext_resource type="PackedScene" path="res://scenes/ui/level_select.tscn" id="3_levels"]
+[ext_resource type="Script" path="res://scripts/hand/hand_sprite.gd" id="4_sprite"]
+[ext_resource type="Texture2D" path="res://assets/hand/base/ground.svg" id="5_ground"]
+[ext_resource type="Texture2D" path="res://assets/hand/base/mine_entrance.svg" id="6_entrance"]
+[ext_resource type="PackedScene" path="res://scenes/base/props/lamp_post.tscn" id="7_lamp"]
+[ext_resource type="PackedScene" path="res://scenes/base/props/stall.tscn" id="8_stall"]
+[ext_resource type="PackedScene" path="res://scenes/base/merchant.tscn" id="9_merchant"]
+[ext_resource type="PackedScene" path="res://scenes/base/props/barrel.tscn" id="10_barrel"]
+[ext_resource type="PackedScene" path="res://scenes/base/props/crate.tscn" id="11_crate"]
+[ext_resource type="PackedScene" path="res://scenes/base/props/well.tscn" id="12_well"]
+[ext_resource type="PackedScene" path="res://scenes/base/props/bush.tscn" id="13_bush"]
+[ext_resource type="PackedScene" path="res://scenes/player/player.tscn" id="14_player"]
+[ext_resource type="PackedScene" path="res://scenes/common/interactable.tscn" id="15_interact"]
+[ext_resource type="PackedScene" path="res://scenes/ui/base_hud.tscn" id="16_hud"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cliff"]
+size = Vector2(640, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_side"]
+size = Vector2(8, 416)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_south"]
+size = Vector2(640, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_shop"]
+size = Vector2(64, 46)
+
+[node name="Base" type="Node2D"]
+texture_filter = 2
+script = ExtResource("1_base")
+talent_tree_scene = ExtResource("2_tree")
+level_select_scene = ExtResource("3_levels")
+map_size = Vector2i(640, 416)
+shadow_key = "h"
+
+[node name="Ground" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("5_ground")
+centered = false
+script = ExtResource("4_sprite")
+
+[node name="Blockers" type="Node2D" parent="."]
+
+[node name="Cliff" type="StaticBody2D" parent="Blockers"]
+position = Vector2(320, 48)
+
+[node name="Shape" type="CollisionShape2D" parent="Blockers/Cliff"]
+shape = SubResource("RectangleShape2D_cliff")
+
+[node name="WestEdge" type="StaticBody2D" parent="Blockers"]
+position = Vector2(-4, 208)
+
+[node name="Shape" type="CollisionShape2D" parent="Blockers/WestEdge"]
+shape = SubResource("RectangleShape2D_side")
+
+[node name="EastEdge" type="StaticBody2D" parent="Blockers"]
+position = Vector2(644, 208)
+
+[node name="Shape" type="CollisionShape2D" parent="Blockers/EastEdge"]
+shape = SubResource("RectangleShape2D_side")
+
+[node name="SouthEdge" type="StaticBody2D" parent="Blockers"]
+position = Vector2(320, 420)
+
+[node name="Shape" type="CollisionShape2D" parent="Blockers/SouthEdge"]
+shape = SubResource("RectangleShape2D_south")
+
+[node name="Decor" type="Node2D" parent="."]
+
+[node name="MineEntrance" type="Sprite2D" parent="Decor"]
+position = Vector2(272, 16)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("6_entrance")
+centered = false
+script = ExtResource("4_sprite")
+
+[node name="Entities" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="LampPostLeft" parent="Entities" instance=ExtResource("7_lamp")]
+position = Vector2(254, 124)
+
+[node name="LampPostRight" parent="Entities" instance=ExtResource("7_lamp")]
+position = Vector2(386, 124)
+
+[node name="Stall" parent="Entities" instance=ExtResource("8_stall")]
+position = Vector2(120, 160)
+
+[node name="Merchant" parent="Entities" instance=ExtResource("9_merchant")]
+position = Vector2(188, 162)
+
+[node name="Barrel" parent="Entities" instance=ExtResource("10_barrel")]
+position = Vector2(60, 150)
+
+[node name="Barrel2" parent="Entities" instance=ExtResource("10_barrel")]
+position = Vector2(42, 166)
+
+[node name="Crate" parent="Entities" instance=ExtResource("11_crate")]
+position = Vector2(236, 146)
+
+[node name="Well" parent="Entities" instance=ExtResource("12_well")]
+position = Vector2(500, 178)
+
+[node name="Bush" parent="Entities" instance=ExtResource("13_bush")]
+position = Vector2(48, 280)
+
+[node name="Bush2" parent="Entities" instance=ExtResource("13_bush")]
+position = Vector2(600, 140)
+
+[node name="Bush3" parent="Entities" instance=ExtResource("13_bush")]
+position = Vector2(560, 370)
+
+[node name="Bush4" parent="Entities" instance=ExtResource("13_bush")]
+position = Vector2(96, 400)
+
+[node name="Bush5" parent="Entities" instance=ExtResource("13_bush")]
+position = Vector2(520, 250)
+
+[node name="Bush6" parent="Entities" instance=ExtResource("13_bush")]
+position = Vector2(230, 396)
+
+[node name="Player" parent="Entities" instance=ExtResource("14_player")]
+position = Vector2(320, 140)
+
+[node name="Entrance" parent="." instance=ExtResource("15_interact")]
+position = Vector2(320, 110)
+
+[node name="Shop" parent="." instance=ExtResource("15_interact")]
+position = Vector2(188, 163)
+
+[node name="Shape" parent="Shop" index="0"]
+shape = SubResource("RectangleShape2D_shop")
+
+[node name="Prompt" parent="Shop" index="1"]
+position = Vector2(0, -41)
+
+[node name="Hud" parent="." instance=ExtResource("16_hud")]
+
+[editable path="Shop"]

@@ -1,0 +1,11 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/hand/hand_sprite.gd" id="1_sprite"]
+[ext_resource type="Texture2D" path="res://assets/hand/floor1/f1_support.svg" id="2_art"]
+
+[node name="Support" type="Sprite2D"]
+texture_filter = 2
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_art")
+centered = false
+script = ExtResource("1_sprite")

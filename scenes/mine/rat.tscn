@@ -1,0 +1,48 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/mine/enemy.gd" id="1_enemy"]
+[ext_resource type="Script" path="res://scripts/hand/hand_shadow.gd" id="2_shadow"]
+[ext_resource type="Texture2D" path="res://assets/hand/base/shadow_m.svg" id="3_shadow_m"]
+[ext_resource type="Script" path="res://scripts/hand/hand_animated_sprite.gd" id="4_anim"]
+[ext_resource type="SpriteFrames" path="res://resources/frames/rat.tres" id="5_frames"]
+[ext_resource type="Shader" path="res://shaders/flash.gdshader" id="6_flash"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_flash"]
+resource_local_to_scene = true
+shader = ExtResource("6_flash")
+shader_parameter/flash = false
+shader_parameter/flash_color = Color(0.996078, 0.905882, 0.380392, 1)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_body"]
+radius = 6.6
+
+[node name="Rat" type="CharacterBody2D"]
+motion_mode = 1
+platform_on_leave = 2
+platform_floor_layers = 0
+platform_wall_layers = 0
+texture_filter = 2
+script = ExtResource("1_enemy")
+type = "rat"
+walk_anim = "walk_left"
+idle_anim = "idle_left"
+attack_anim = "attack_left"
+hit_frame = 2
+
+[node name="Shadow" type="Sprite2D" parent="."]
+position = Vector2(0, -1)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_shadow_m")
+script = ExtResource("2_shadow")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_flash")
+scale = Vector2(0.25, 0.25)
+sprite_frames = ExtResource("5_frames")
+animation = &"idle_left"
+offset = Vector2(0, -36)
+script = ExtResource("4_anim")
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, -6)
+shape = SubResource("CircleShape2D_body")

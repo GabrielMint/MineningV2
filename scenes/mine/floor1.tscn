@@ -1,0 +1,35 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://scenes/mine/mine.tscn" id="1_mine"]
+[ext_resource type="PackedScene" path="res://scenes/mine/ore_iron.tscn" id="2_ore"]
+[ext_resource type="PackedScene" path="res://scenes/mine/rat.tscn" id="3_enemy"]
+[ext_resource type="PackedScene" path="res://scenes/mine/decor/f1_edge_left.tscn" id="4_edge_l"]
+[ext_resource type="PackedScene" path="res://scenes/mine/decor/f1_edge_right.tscn" id="5_edge_r"]
+[ext_resource type="PackedScene" path="res://scenes/mine/decor/f1_edge_bottom.tscn" id="6_edge_b"]
+[ext_resource type="TileSet" path="res://resources/tilesets/f1_hand.tres" id="7_tiles"]
+[ext_resource type="Script" path="res://scripts/mine/old_mine_decor.gd" id="8_decor"]
+[ext_resource type="PackedScene" path="res://scenes/mine/decor/f1_support.tscn" id="9_support"]
+[ext_resource type="PackedScene" path="res://scenes/mine/decor/f1_skeleton.tscn" id="10_skeleton"]
+[ext_resource type="PackedScene" path="res://scenes/mine/decor/f1_rock_small.tscn" id="11_rock"]
+[ext_resource type="PackedScene" path="res://scenes/mine/decor/f1_decal_moss.tscn" id="12_moss"]
+[ext_resource type="PackedScene" path="res://scenes/mine/decor/f1_decal_pebbles.tscn" id="13_pebbles"]
+
+[node name="Floor1" instance=ExtResource("1_mine")]
+floor_index = 0
+shadow_key = "d"
+ore_scene = ExtResource("2_ore")
+enemy_scene = ExtResource("3_enemy")
+edge_left = ExtResource("4_edge_l")
+edge_right = ExtResource("5_edge_r")
+edge_bottom = ExtResource("6_edge_b")
+
+[node name="Ground" parent="." index="0"]
+tile_set = ExtResource("7_tiles")
+
+[node name="Decorator" type="Node" parent="."]
+script = ExtResource("8_decor")
+support_scene = ExtResource("9_support")
+skeleton_scene = ExtResource("10_skeleton")
+rock_scene = ExtResource("11_rock")
+moss_scene = ExtResource("12_moss")
+pebbles_scene = ExtResource("13_pebbles")

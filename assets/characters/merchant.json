@@ -1,0 +1,85 @@
+{
+ "frames": {
+  "merchant_idle_0": {
+   "frame": {
+    "x": 0,
+    "y": 0,
+    "w": 32,
+    "h": 30
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 32,
+    "h": 30
+   },
+   "sourceSize": {
+    "w": 32,
+    "h": 30
+   },
+   "duration": 2200
+  },
+  "merchant_idle_1": {
+   "frame": {
+    "x": 33,
+    "y": 0,
+    "w": 32,
+    "h": 30
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 32,
+    "h": 30
+   },
+   "sourceSize": {
+    "w": 32,
+    "h": 30
+   },
+   "duration": 140
+  },
+  "merchant_idle_2": {
+   "frame": {
+    "x": 0,
+    "y": 31,
+    "w": 32,
+    "h": 30
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 32,
+    "h": 30
+   },
+   "sourceSize": {
+    "w": 32,
+    "h": 30
+   },
+   "duration": 1400
+  }
+ },
+ "meta": {
+  "app": "pxl",
+  "image": "merchant.png",
+  "format": "RGBA8888",
+  "size": {
+   "w": 65,
+   "h": 61
+  },
+  "scale": "1",
+  "frameTags": [
+   {
+    "name": "merchant_idle",
+    "from": 0,
+    "to": 2,
+    "direction": "forward"
+   }
+  ]
+ }
+}

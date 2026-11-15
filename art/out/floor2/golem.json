@@ -1,0 +1,64 @@
+{
+ "frames": {
+  "golem_walk_0": {
+   "frame": {
+    "x": 0,
+    "y": 0,
+    "w": 42,
+    "h": 36
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 42,
+    "h": 36
+   },
+   "sourceSize": {
+    "w": 42,
+    "h": 36
+   },
+   "duration": 250
+  },
+  "golem_walk_1": {
+   "frame": {
+    "x": 43,
+    "y": 0,
+    "w": 42,
+    "h": 36
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 42,
+    "h": 36
+   },
+   "sourceSize": {
+    "w": 42,
+    "h": 36
+   },
+   "duration": 250
+  }
+ },
+ "meta": {
+  "app": "pxl",
+  "image": "golem.png",
+  "format": "RGBA8888",
+  "size": {
+   "w": 85,
+   "h": 36
+  },
+  "scale": "1",
+  "frameTags": [
+   {
+    "name": "golem_walk",
+    "from": 0,
+    "to": 1,
+    "direction": "forward"
+   }
+  ]
+ }
+}

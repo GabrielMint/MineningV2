@@ -1,0 +1,105 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/talent_tree.gd" id="1_tree"]
+[ext_resource type="PackedScene" path="res://scenes/ui/talent_node.tscn" id="2_node"]
+[ext_resource type="Theme" path="res://resources/ui/ui_theme.tres" id="3_theme"]
+[ext_resource type="Script" path="res://scripts/hand/hand_texture_rect.gd" id="4_rect"]
+[ext_resource type="Texture2D" path="res://assets/hand/talents/tt_background.svg" id="5_bg"]
+[ext_resource type="Script" path="res://scripts/ui/talent_links.gd" id="6_links"]
+[ext_resource type="PackedScene" path="res://scenes/ui/bank_panel.tscn" id="7_bank"]
+[ext_resource type="Script" path="res://scripts/hand/hand_panel.gd" id="8_panel"]
+[ext_resource type="Texture2D" path="res://assets/hand/ui/ui_panel_dark.svg" id="9_dark"]
+[ext_resource type="PackedScene" path="res://scenes/ui/talent_tooltip.tscn" id="10_tooltip"]
+
+[node name="TalentTree" type="CanvasLayer"]
+layer = 5
+script = ExtResource("1_tree")
+node_scene = ExtResource("2_node")
+
+[node name="Root" type="Control" parent="."]
+texture_filter = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_theme")
+
+[node name="Background" type="TextureRect" parent="Root"]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+texture = ExtResource("5_bg")
+expand_mode = 1
+script = ExtResource("4_rect")
+
+[node name="Graph" type="Control" parent="Root"]
+unique_name_in_owner = true
+offset_left = 240.0
+offset_top = 150.0
+offset_right = 240.0
+offset_bottom = 150.0
+mouse_filter = 2
+
+[node name="Links" type="Control" parent="Root/Graph"]
+unique_name_in_owner = true
+mouse_filter = 2
+script = ExtResource("6_links")
+
+[node name="BankPanel" parent="Root" instance=ExtResource("7_bank")]
+unique_name_in_owner = true
+
+[node name="TitleBox" type="MarginContainer" parent="Root"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -4.0
+offset_top = 4.0
+offset_right = -4.0
+offset_bottom = 22.0
+grow_horizontal = 0
+mouse_filter = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 2
+script = ExtResource("8_panel")
+texture = ExtResource("9_dark")
+patch_margin = 24.0
+
+[node name="Title" type="Label" parent="Root/TitleBox"]
+theme_override_colors/font_color = Color(0.917647, 0.831373, 0.666667, 1)
+text = "O MERCADOR - HABILIDADES"
+
+[node name="HintBox" type="MarginContainer" parent="Root"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = -22.0
+offset_right = -4.0
+offset_bottom = -4.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_filter = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 2
+script = ExtResource("8_panel")
+texture = ExtResource("9_dark")
+patch_margin = 24.0
+
+[node name="Hint" type="Label" parent="Root/HintBox"]
+theme_override_colors/font_color = Color(0.917647, 0.831373, 0.666667, 1)
+text = "ARRASTE: MOVER   RODA: ZOOM   ESC: FECHAR"
+
+[node name="Tooltip" parent="Root" instance=ExtResource("10_tooltip")]
+unique_name_in_owner = true
+visible = false

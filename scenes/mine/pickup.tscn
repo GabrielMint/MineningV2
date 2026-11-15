@@ -1,0 +1,22 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/mine/pickup.gd" id="1_pickup"]
+[ext_resource type="Script" path="res://scripts/hand/hand_sprite.gd" id="2_sprite"]
+[ext_resource type="Texture2D" path="res://assets/hand/floor1_actors/item_iron.svg" id="3_iron"]
+[ext_resource type="Texture2D" path="res://assets/hand/floor2_actors/item_sapphire.svg" id="4_sapphire"]
+[ext_resource type="Texture2D" path="res://assets/hand/floor1_actors/item_fang.svg" id="5_fang"]
+
+[node name="Pickup" type="Node2D"]
+texture_filter = 2
+script = ExtResource("1_pickup")
+icons = {
+"fang": ExtResource("5_fang"),
+"iron": ExtResource("3_iron"),
+"sapphire": ExtResource("4_sapphire")
+}
+
+[node name="Sprite" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_iron")
+offset = Vector2(0, -20)
+script = ExtResource("2_sprite")

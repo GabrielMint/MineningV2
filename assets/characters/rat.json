@@ -1,0 +1,112 @@
+{
+ "frames": {
+  "rat_idle_left_0": {
+   "frame": {
+    "x": 0,
+    "y": 0,
+    "w": 28,
+    "h": 15
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 28,
+    "h": 15
+   },
+   "sourceSize": {
+    "w": 28,
+    "h": 15
+   },
+   "duration": 333
+  },
+  "rat_idle_left_1": {
+   "frame": {
+    "x": 29,
+    "y": 0,
+    "w": 28,
+    "h": 15
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 28,
+    "h": 15
+   },
+   "sourceSize": {
+    "w": 28,
+    "h": 15
+   },
+   "duration": 333
+  },
+  "rat_walk_left_0": {
+   "frame": {
+    "x": 0,
+    "y": 16,
+    "w": 28,
+    "h": 15
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 28,
+    "h": 15
+   },
+   "sourceSize": {
+    "w": 28,
+    "h": 15
+   },
+   "duration": 100
+  },
+  "rat_walk_left_1": {
+   "frame": {
+    "x": 29,
+    "y": 16,
+    "w": 28,
+    "h": 15
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 28,
+    "h": 15
+   },
+   "sourceSize": {
+    "w": 28,
+    "h": 15
+   },
+   "duration": 100
+  }
+ },
+ "meta": {
+  "app": "pxl",
+  "image": "rat.png",
+  "format": "RGBA8888",
+  "size": {
+   "w": 57,
+   "h": 31
+  },
+  "scale": "1",
+  "frameTags": [
+   {
+    "name": "rat_idle_left",
+    "from": 0,
+    "to": 1,
+    "direction": "forward"
+   },
+   {
+    "name": "rat_walk_left",
+    "from": 2,
+    "to": 3,
+    "direction": "forward"
+   }
+  ]
+ }
+}

@@ -1,0 +1,106 @@
+{
+ "frames": {
+  "fx_dust_0": {
+   "frame": {
+    "x": 0,
+    "y": 0,
+    "w": 32,
+    "h": 32
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 32,
+    "h": 32
+   },
+   "sourceSize": {
+    "w": 32,
+    "h": 32
+   },
+   "duration": 71
+  },
+  "fx_dust_1": {
+   "frame": {
+    "x": 33,
+    "y": 0,
+    "w": 32,
+    "h": 32
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 32,
+    "h": 32
+   },
+   "sourceSize": {
+    "w": 32,
+    "h": 32
+   },
+   "duration": 71
+  },
+  "fx_dust_2": {
+   "frame": {
+    "x": 0,
+    "y": 33,
+    "w": 32,
+    "h": 32
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 32,
+    "h": 32
+   },
+   "sourceSize": {
+    "w": 32,
+    "h": 32
+   },
+   "duration": 71
+  },
+  "fx_dust_3": {
+   "frame": {
+    "x": 33,
+    "y": 33,
+    "w": 32,
+    "h": 32
+   },
+   "rotated": false,
+   "trimmed": false,
+   "spriteSourceSize": {
+    "x": 0,
+    "y": 0,
+    "w": 32,
+    "h": 32
+   },
+   "sourceSize": {
+    "w": 32,
+    "h": 32
+   },
+   "duration": 71
+  }
+ },
+ "meta": {
+  "app": "pxl",
+  "image": "fx_dust.png",
+  "format": "RGBA8888",
+  "size": {
+   "w": 65,
+   "h": 65
+  },
+  "scale": "1",
+  "frameTags": [
+   {
+    "name": "fx_dust",
+    "from": 0,
+    "to": 3,
+    "direction": "forward"
+   }
+  ]
+ }
+}

@@ -1,0 +1,67 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/world/base_hud.gd" id="1_hud"]
+[ext_resource type="Theme" path="res://resources/ui/ui_theme.tres" id="2_theme"]
+[ext_resource type="PackedScene" path="res://scenes/ui/bank_panel.tscn" id="3_bank"]
+[ext_resource type="Script" path="res://scripts/hand/hand_panel.gd" id="4_panel"]
+[ext_resource type="Texture2D" path="res://assets/hand/ui/ui_panel.svg" id="5_panel"]
+[ext_resource type="Texture2D" path="res://assets/hand/ui/ui_panel_dark.svg" id="6_dark"]
+
+[node name="BaseHud" type="CanvasLayer"]
+script = ExtResource("1_hud")
+
+[node name="Root" type="Control" parent="."]
+texture_filter = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("2_theme")
+
+[node name="BankPanel" parent="Root" instance=ExtResource("3_bank")]
+unique_name_in_owner = true
+
+[node name="HintBox" type="MarginContainer" parent="Root"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = -22.0
+offset_right = 4.0
+offset_bottom = -4.0
+grow_vertical = 0
+mouse_filter = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 2
+script = ExtResource("4_panel")
+texture = ExtResource("6_dark")
+patch_margin = 24.0
+
+[node name="Hint" type="Label" parent="Root/HintBox"]
+theme_override_colors/font_color = Color(0.917647, 0.831373, 0.666667, 1)
+text = "WASD: ANDAR   E: INTERAGIR"
+
+[node name="Toast" type="MarginContainer" parent="Root"]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_top = -36.0
+offset_bottom = -4.0
+grow_horizontal = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 9
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 9
+script = ExtResource("4_panel")
+texture = ExtResource("5_panel")
+
+[node name="ToastLabel" type="Label" parent="Root/Toast"]
+unique_name_in_owner = true
+text = "VOLTOU EM SEGURANCA. TROUXE: NADA"

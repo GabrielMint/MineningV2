@@ -1,0 +1,53 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/mine/mine.gd" id="1_mine"]
+[ext_resource type="PackedScene" path="res://scenes/mine/pickup.tscn" id="2_pickup"]
+[ext_resource type="PackedScene" path="res://scenes/fx/dust.tscn" id="3_dust"]
+[ext_resource type="Script" path="res://scripts/hand/hand_tile_layer.gd" id="4_tiles"]
+[ext_resource type="PackedScene" path="res://scenes/mine/decor/f1_ladder.tscn" id="5_ladder"]
+[ext_resource type="PackedScene" path="res://scenes/player/player.tscn" id="6_player"]
+[ext_resource type="PackedScene" path="res://scenes/common/interactable.tscn" id="7_interact"]
+[ext_resource type="PackedScene" path="res://scenes/ui/hud.tscn" id="8_hud"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_exit"]
+size = Vector2(40, 30)
+
+[node name="Mine" type="Node2D"]
+texture_filter = 2
+script = ExtResource("1_mine")
+pickup_scene = ExtResource("2_pickup")
+dust_scene = ExtResource("3_dust")
+drains_air = true
+
+[node name="Ground" type="TileMapLayer" parent="."]
+scale = Vector2(0.25, 0.25)
+script = ExtResource("4_tiles")
+
+[node name="Blockers" type="Node2D" parent="."]
+
+[node name="Decor" type="Node2D" parent="."]
+
+[node name="Ladder" parent="Decor" instance=ExtResource("5_ladder")]
+position = Vector2(487, 32)
+
+[node name="Entities" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="Player" parent="Entities" instance=ExtResource("6_player")]
+position = Vector2(496, 144)
+
+[node name="Exit" parent="." instance=ExtResource("7_interact")]
+position = Vector2(496, 75)
+
+[node name="Shape" parent="Exit" index="0"]
+shape = SubResource("RectangleShape2D_exit")
+
+[node name="Prompt" parent="Exit" index="1"]
+position = Vector2(0, -51)
+
+[node name="ExitSpot" type="Marker2D" parent="."]
+position = Vector2(496, 82)
+
+[node name="Hud" parent="." instance=ExtResource("8_hud")]
+
+[editable path="Exit"]

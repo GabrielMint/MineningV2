@@ -1,0 +1,29 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/mine/pick_orbit.gd" id="1_orbit"]
+[ext_resource type="Script" path="res://scripts/hand/hand_sprite.gd" id="2_sprite"]
+[ext_resource type="Texture2D" path="res://assets/hand/floor1_actors/fx_pick.svg" id="3_pick"]
+
+[node name="PickOrbit" type="Node2D"]
+z_index = 4
+texture_filter = 2
+position = Vector2(0, -13)
+script = ExtResource("1_orbit")
+
+[node name="Pick1" type="Sprite2D" parent="."]
+position = Vector2(40, 0)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_pick")
+script = ExtResource("2_sprite")
+
+[node name="Pick2" type="Sprite2D" parent="."]
+position = Vector2(-20, 35)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_pick")
+script = ExtResource("2_sprite")
+
+[node name="Pick3" type="Sprite2D" parent="."]
+position = Vector2(-20, -35)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_pick")
+script = ExtResource("2_sprite")

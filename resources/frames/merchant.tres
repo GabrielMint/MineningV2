@@ -1,0 +1,53 @@
+[gd_resource type="SpriteFrames" format=3]
+
+[ext_resource type="Texture2D" path="res://assets/hand/characters/merchant.svg" id="1_kb1bp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kb1bp"]
+atlas = ExtResource("1_kb1bp")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_254dw"]
+atlas = ExtResource("1_kb1bp")
+region = Rect2(132, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wnuu8"]
+atlas = ExtResource("1_kb1bp")
+region = Rect2(264, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r3k33"]
+atlas = ExtResource("1_kb1bp")
+region = Rect2(396, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jd8om"]
+atlas = ExtResource("1_kb1bp")
+region = Rect2(528, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k5imv"]
+atlas = ExtResource("1_kb1bp")
+region = Rect2(660, 0, 128, 128)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 17.6,
+"texture": SubResource("AtlasTexture_kb1bp")
+}, {
+"duration": 1.12,
+"texture": SubResource("AtlasTexture_254dw")
+}, {
+"duration": 2.4,
+"texture": SubResource("AtlasTexture_wnuu8")
+}, {
+"duration": 5.6,
+"texture": SubResource("AtlasTexture_r3k33")
+}, {
+"duration": 2.4,
+"texture": SubResource("AtlasTexture_jd8om")
+}, {
+"duration": 9.6,
+"texture": SubResource("AtlasTexture_k5imv")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 8.0
+}]

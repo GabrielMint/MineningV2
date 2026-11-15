@@ -1,0 +1,156 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/mine/hud.gd" id="1_hud"]
+[ext_resource type="Theme" path="res://resources/ui/ui_theme.tres" id="2_theme"]
+[ext_resource type="Script" path="res://scripts/hand/hand_panel.gd" id="3_panel"]
+[ext_resource type="Script" path="res://scripts/hand/hand_texture_rect.gd" id="4_rect"]
+[ext_resource type="Texture2D" path="res://assets/hand/ui/ui_panel.svg" id="5_panel"]
+[ext_resource type="Texture2D" path="res://assets/hand/ui/ui_panel_dark.svg" id="6_dark"]
+[ext_resource type="Texture2D" path="res://assets/hand/ui/ui_bar_frame.svg" id="7_frame"]
+[ext_resource type="Texture2D" path="res://assets/hand/ui/ui_bar_fill.svg" id="8_fill"]
+[ext_resource type="Texture2D" path="res://assets/hand/ui/icon_iron.svg" id="9_iron"]
+[ext_resource type="Texture2D" path="res://assets/hand/ui/icon_sapphire.svg" id="10_sapphire"]
+[ext_resource type="Texture2D" path="res://assets/hand/ui/icon_fang.svg" id="11_fang"]
+
+[node name="Hud" type="CanvasLayer"]
+script = ExtResource("1_hud")
+currency_icons = {
+"fang": ExtResource("11_fang"),
+"iron": ExtResource("9_iron"),
+"sapphire": ExtResource("10_sapphire")
+}
+
+[node name="Root" type="Control" parent="."]
+texture_filter = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme = ExtResource("2_theme")
+
+[node name="Panel" type="MarginContainer" parent="Root"]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 180.0
+offset_bottom = 60.0
+mouse_filter = 2
+script = ExtResource("3_panel")
+texture = ExtResource("5_panel")
+
+[node name="BarFrame" type="TextureRect" parent="Root"]
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 136.0
+offset_bottom = 26.0
+mouse_filter = 2
+texture = ExtResource("7_frame")
+expand_mode = 1
+script = ExtResource("4_rect")
+
+[node name="FillClip" type="Control" parent="Root"]
+unique_name_in_owner = true
+clip_contents = true
+offset_left = 14.0
+offset_top = 14.0
+offset_right = 134.0
+offset_bottom = 24.0
+mouse_filter = 2
+
+[node name="Fill" type="TextureRect" parent="Root/FillClip"]
+offset_right = 120.0
+offset_bottom = 10.0
+mouse_filter = 2
+texture = ExtResource("8_fill")
+expand_mode = 1
+script = ExtResource("4_rect")
+
+[node name="AirLabel" type="Label" parent="Root"]
+offset_left = 143.0
+offset_top = 11.0
+offset_right = 143.0
+offset_bottom = 11.0
+text = "AR"
+
+[node name="OreIcon" type="TextureRect" parent="Root"]
+unique_name_in_owner = true
+offset_left = 14.0
+offset_top = 32.0
+offset_right = 28.0
+offset_bottom = 46.0
+mouse_filter = 2
+texture = ExtResource("9_iron")
+expand_mode = 1
+script = ExtResource("4_rect")
+
+[node name="OreCount" type="Label" parent="Root"]
+unique_name_in_owner = true
+offset_left = 31.0
+offset_top = 33.0
+offset_right = 31.0
+offset_bottom = 33.0
+text = "0"
+
+[node name="FangIcon" type="TextureRect" parent="Root"]
+offset_left = 84.0
+offset_top = 32.0
+offset_right = 98.0
+offset_bottom = 46.0
+mouse_filter = 2
+texture = ExtResource("11_fang")
+expand_mode = 1
+script = ExtResource("4_rect")
+
+[node name="FangCount" type="Label" parent="Root"]
+unique_name_in_owner = true
+offset_left = 101.0
+offset_top = 33.0
+offset_right = 101.0
+offset_bottom = 33.0
+text = "0"
+
+[node name="TitleBox" type="MarginContainer" parent="Root"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -4.0
+offset_top = 4.0
+offset_right = -4.0
+offset_bottom = 22.0
+grow_horizontal = 0
+mouse_filter = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 2
+script = ExtResource("3_panel")
+texture = ExtResource("6_dark")
+patch_margin = 24.0
+
+[node name="Title" type="Label" parent="Root/TitleBox"]
+unique_name_in_owner = true
+theme_override_colors/font_color = Color(0.917647, 0.831373, 0.666667, 1)
+text = "A ANTIGA MINA  1-1"
+
+[node name="HintBox" type="MarginContainer" parent="Root"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = -22.0
+offset_right = 4.0
+offset_bottom = -4.0
+grow_vertical = 0
+mouse_filter = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 2
+script = ExtResource("3_panel")
+texture = ExtResource("6_dark")
+patch_margin = 24.0
+
+[node name="Hint" type="Label" parent="Root/HintBox"]
+theme_override_colors/font_color = Color(0.917647, 0.831373, 0.666667, 1)
+text = "E NA ESCADA: VOLTAR COM TUDO"

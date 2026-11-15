@@ -1,0 +1,58 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/level_select.gd" id="1_levels"]
+[ext_resource type="PackedScene" path="res://scenes/ui/floor_row.tscn" id="2_row"]
+[ext_resource type="PackedScene" path="res://scenes/ui/ui_button.tscn" id="3_button"]
+[ext_resource type="Theme" path="res://resources/ui/ui_theme.tres" id="4_theme"]
+[ext_resource type="Script" path="res://scripts/hand/hand_panel.gd" id="5_panel"]
+[ext_resource type="Texture2D" path="res://assets/hand/ui/ui_panel.svg" id="6_panel"]
+
+[node name="LevelSelect" type="CanvasLayer"]
+layer = 5
+script = ExtResource("1_levels")
+row_scene = ExtResource("2_row")
+button_scene = ExtResource("3_button")
+
+[node name="Root" type="Control" parent="."]
+texture_filter = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_theme")
+
+[node name="Panel" type="MarginContainer" parent="Root"]
+offset_left = 80.0
+offset_top = 42.0
+offset_right = 400.0
+offset_bottom = 222.0
+mouse_filter = 2
+script = ExtResource("5_panel")
+texture = ExtResource("6_panel")
+
+[node name="Title" type="Label" parent="Root"]
+offset_left = 80.0
+offset_top = 57.0
+offset_right = 400.0
+offset_bottom = 71.0
+text = "DESCER PARA A MINA"
+horizontal_alignment = 1
+
+[node name="Rows" type="VBoxContainer" parent="Root"]
+unique_name_in_owner = true
+offset_left = 100.0
+offset_top = 81.0
+offset_right = 380.0
+offset_bottom = 81.0
+mouse_filter = 2
+theme_override_constants/separation = 9
+
+[node name="Hint" type="Label" parent="Root"]
+offset_left = 80.0
+offset_top = 199.0
+offset_right = 400.0
+offset_bottom = 213.0
+theme_override_colors/font_color = Color(0.45098, 0.243137, 0.223529, 1)
+text = "ESC: FECHAR"
+horizontal_alignment = 1
